@@ -58,7 +58,18 @@ public class Undead {
         this.attackDamage = attackDamage;
     }
 
-    public int existedFor(){
+    public int getExistenceYears(){
         return Period.between(appearanceDate,LocalDate.now()).getYears();
+    }
+
+    @Override
+    public String toString() {
+        return "Undead{" +
+                "name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", domain='" + domain + '\'' +
+                ", appearanceDate=" + appearanceDate +
+                ", attackDamage=" + attackDamage +
+                '}';
     }
 }
